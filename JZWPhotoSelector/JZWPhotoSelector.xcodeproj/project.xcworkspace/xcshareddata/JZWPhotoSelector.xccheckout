@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7033D553-9B00-4576-8278-A1B3E5168FCC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JZWPhotoSelector</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AF97CE8EC3917861D3851F38A5BEFD28F1337880</key>
+		<string>https://github.com/jimmyzywang/JZWPhotoSelector.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JZWPhotoSelector/JZWPhotoSelector.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AF97CE8EC3917861D3851F38A5BEFD28F1337880</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jimmyzywang/JZWPhotoSelector.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AF97CE8EC3917861D3851F38A5BEFD28F1337880</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AF97CE8EC3917861D3851F38A5BEFD28F1337880</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JZWPhotoSelector</string>
+		</dict>
+	</array>
+</dict>
+</plist>
