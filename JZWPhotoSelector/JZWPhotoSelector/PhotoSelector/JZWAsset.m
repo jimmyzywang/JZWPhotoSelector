@@ -7,7 +7,29 @@
 //
 
 #import "JZWAsset.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <UIKit/UIKit.h>
 
-@implementation JZWAsset
+@implementation JZWAsset{
+  ALAsset* _alAsset;
+}
+
+-(instancetype)initWithALAsset:(ALAsset *)alAsset{
+  if (self = [super init]) {
+    _alAsset = alAsset;
+  }
+  return self;
+}
+
+-(UIImage*)thumnNail{
+  UIImage* image = [[UIImage alloc] initWithCGImage:[_alAsset thumbnail]];
+  return image;
+}
+
+-(UIImage*)fullscreenImage{
+  ALAssetRepresentation* alAssetRep = [_alAsset defaultRepresentation];
+  UIImage* image = [[UIImage alloc] initWithCGImage:[alAssetRep fullScreenImage]];
+  return image;
+}
 
 @end

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class ALAsset;
+@class UIImage;
+
 @interface JZWAsset : NSObject
 
+-(instancetype)initWithALAsset:(ALAsset*)alasset;
+-(UIImage*)thumnNail;
+-(UIImage*)fullscreenImage;
 @end
