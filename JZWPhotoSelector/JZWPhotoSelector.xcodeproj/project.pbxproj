@@ -14,6 +14,10 @@
 		DF4703AD1A27524A001B88BC /* JZWPhotoSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703AC1A27524A001B88BC /* JZWPhotoSelectorTests.m */; };
 		DF4703BC1A275377001B88BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703B91A275377001B88BC /* AppDelegate.m */; };
 		DF4703BD1A275377001B88BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703BB1A275377001B88BC /* ViewController.m */; };
+		DF4703C01A28059E001B88BC /* JZWAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703BF1A28059E001B88BC /* JZWAsset.m */; };
+		DF4703C31A2805B6001B88BC /* JZWAssetGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */; };
+		DF4703C51A280B14001B88BC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4703C41A280B14001B88BC /* AssetsLibrary.framework */; };
+		DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */ = {isa = PBXBuildFile; fileRef = DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		DF4703B91A275377001B88BC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Others/AppDelegate.m; sourceTree = "<group>"; };
 		DF4703BA1A275377001B88BC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Others/ViewController.h; sourceTree = "<group>"; };
 		DF4703BB1A275377001B88BC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Others/ViewController.m; sourceTree = "<group>"; };
+		DF4703BE1A28059E001B88BC /* JZWAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAsset.h; path = PhotoSelector/JZWAsset.h; sourceTree = "<group>"; };
+		DF4703BF1A28059E001B88BC /* JZWAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAsset.m; path = PhotoSelector/JZWAsset.m; sourceTree = "<group>"; };
+		DF4703C11A2805B6001B88BC /* JZWAssetGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetGroup.h; path = PhotoSelector/JZWAssetGroup.h; sourceTree = "<group>"; };
+		DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetGroup.m; path = PhotoSelector/JZWAssetGroup.m; sourceTree = "<group>"; };
+		DF4703C41A280B14001B88BC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWPhotoSelector.h; path = PhotoSelector/JZWPhotoSelector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4703C51A280B14001B88BC /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +92,7 @@
 		DF47038F1A27524A001B88BC /* JZWPhotoSelector */ = {
 			isa = PBXGroup;
 			children = (
+				DF4703C61A280B20001B88BC /* Library */,
 				DF4703B71A275295001B88BC /* JZWPhotoSelector */,
 				DF4703B61A27528E001B88BC /* Others */,
 				DF47039A1A27524A001B88BC /* Main.storyboard */,
@@ -131,8 +143,21 @@
 		DF4703B71A275295001B88BC /* JZWPhotoSelector */ = {
 			isa = PBXGroup;
 			children = (
+				DF4703BE1A28059E001B88BC /* JZWAsset.h */,
+				DF4703BF1A28059E001B88BC /* JZWAsset.m */,
+				DF4703C11A2805B6001B88BC /* JZWAssetGroup.h */,
+				DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */,
+				DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */,
 			);
 			name = JZWPhotoSelector;
+			sourceTree = "<group>";
+		};
+		DF4703C61A280B20001B88BC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DF4703C41A280B14001B88BC /* AssetsLibrary.framework */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4703C01A28059E001B88BC /* JZWAsset.m in Sources */,
+				DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */,
+				DF4703C31A2805B6001B88BC /* JZWAssetGroup.m in Sources */,
 				DF4703BD1A275377001B88BC /* ViewController.m in Sources */,
 				DF4703BC1A275377001B88BC /* AppDelegate.m in Sources */,
 				DF4703931A27524A001B88BC /* main.m in Sources */,
