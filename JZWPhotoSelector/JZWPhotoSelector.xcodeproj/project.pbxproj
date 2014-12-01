@@ -18,6 +18,9 @@
 		DF4703C31A2805B6001B88BC /* JZWAssetGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */; };
 		DF4703C51A280B14001B88BC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4703C41A280B14001B88BC /* AssetsLibrary.framework */; };
 		DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */ = {isa = PBXBuildFile; fileRef = DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */; };
+		DF4703CB1A287258001B88BC /* JZWAssetLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */; };
+		DFC39D801A2C048F0011C3EA /* JZWAssetDefine.h in Sources */ = {isa = PBXBuildFile; fileRef = DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */; };
+		DFC39D831A2C0EA70011C3EA /* JZWAssetsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC39D821A2C0EA70011C3EA /* JZWAssetsUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,11 @@
 		DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetGroup.m; path = PhotoSelector/JZWAssetGroup.m; sourceTree = "<group>"; };
 		DF4703C41A280B14001B88BC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWPhotoSelector.h; path = PhotoSelector/JZWPhotoSelector.h; sourceTree = "<group>"; };
+		DF4703C91A287258001B88BC /* JZWAssetLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetLibrary.h; path = PhotoSelector/JZWAssetLibrary.h; sourceTree = "<group>"; };
+		DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetLibrary.m; path = PhotoSelector/JZWAssetLibrary.m; sourceTree = "<group>"; };
+		DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetDefine.h; path = PhotoSelector/JZWAssetDefine.h; sourceTree = "<group>"; };
+		DFC39D811A2C0EA70011C3EA /* JZWAssetsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsUtils.h; path = PhotoSelector/JZWAssetsUtils.h; sourceTree = "<group>"; };
+		DFC39D821A2C0EA70011C3EA /* JZWAssetsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsUtils.m; path = PhotoSelector/JZWAssetsUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +151,16 @@
 		DF4703B71A275295001B88BC /* JZWPhotoSelector */ = {
 			isa = PBXGroup;
 			children = (
+				DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */,
 				DF4703BE1A28059E001B88BC /* JZWAsset.h */,
 				DF4703BF1A28059E001B88BC /* JZWAsset.m */,
 				DF4703C11A2805B6001B88BC /* JZWAssetGroup.h */,
 				DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */,
 				DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */,
+				DF4703C91A287258001B88BC /* JZWAssetLibrary.h */,
+				DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */,
+				DFC39D811A2C0EA70011C3EA /* JZWAssetsUtils.h */,
+				DFC39D821A2C0EA70011C3EA /* JZWAssetsUtils.m */,
 			);
 			name = JZWPhotoSelector;
 			sourceTree = "<group>";
@@ -260,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC39D831A2C0EA70011C3EA /* JZWAssetsUtils.m in Sources */,
+				DF4703CB1A287258001B88BC /* JZWAssetLibrary.m in Sources */,
+				DFC39D801A2C048F0011C3EA /* JZWAssetDefine.h in Sources */,
 				DF4703C01A28059E001B88BC /* JZWAsset.m in Sources */,
 				DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */,
 				DF4703C31A2805B6001B88BC /* JZWAssetGroup.m in Sources */,
@@ -458,6 +474,7 @@
 				DF4703B21A27524A001B88BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF4703B31A27524A001B88BC /* Build configuration list for PBXNativeTarget "JZWPhotoSelectorTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +483,7 @@
 				DF4703B51A27524A001B88BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,15 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JZWAssetDefine.h"
 
 @class ALAssetsGroup;
 @class UIImage;
 @class JZWAsset;
-
-typedef NS_ENUM(NSInteger, JZWAssetGroupType){
-  JZWAssetGroupPhoto,
-  JZWAssetGroupVideo
-};
 
 typedef void(^enumerateBlock)(BOOL finish,NSArray* assets);
 
@@ -26,7 +22,7 @@ typedef void(^enumerateBlock)(BOOL finish,NSArray* assets);
 -(NSString*)displayName;
 -(NSInteger)alAssetsCount;
 -(UIImage*)posterImage;
--(void)enumerateAlassetsUsingBlock:(enumerateBlock)block;
+-(void)enumerateAssetsUsingBlock:(enumerateBlock)block;
 //-(JZWAssetGroupType)type;
 
 

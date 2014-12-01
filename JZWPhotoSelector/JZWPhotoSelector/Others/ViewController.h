@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  JZWPhotoSelector
+//  JZWGesturePass
 //
-//  Created by jimmyzywang-nb on 14/11/27.
+//  Created by jimmyzywang-nb on 14/11/26.
 //  Copyright (c) 2014年 com.JZWang.com. All rights reserved.
 //
 

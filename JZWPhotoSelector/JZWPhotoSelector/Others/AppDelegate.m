@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  JZWPhotoSelector
+//  JZWGesturePass
 //
-//  Created by jimmyzywang-nb on 14/11/27.
+//  Created by jimmyzywang-nb on 14/11/26.
 //  Copyright (c) 2014年 com.JZWang.com. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  ViewController* mainViewCtrl = [[ViewController alloc] init];
+  UINavigationController* naviCtrl = [[UINavigationController alloc] initWithRootViewController:mainViewCtrl];
+  self.window.rootViewController = naviCtrl;
   return YES;
 }
 
