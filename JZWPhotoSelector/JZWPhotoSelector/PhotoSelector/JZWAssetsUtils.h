@@ -9,4 +9,9 @@
 #import "JZWAssetDefine.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
--(JZWAssetGroupType)bridgeToJZWAssetGroupContentsType:
+@interface JZWAssetsUtils : NSObject{
+}
+
++(JZWAssetGroupType)bridgeToJZWAssetGroupContentsType:(ALAssetsGroupType)alAssetGroupType;
+
+@end

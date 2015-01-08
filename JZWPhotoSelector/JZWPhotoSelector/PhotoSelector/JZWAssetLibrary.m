@@ -8,6 +8,8 @@
 
 #import "JZWAssetLibrary.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "JZWAssetsUtils.h"
+
 @implementation JZWAssetLibrary{
   ALAssetsLibrary* _assetsLib;
 }
@@ -29,6 +31,7 @@
 }
 
 -(void)enumerateAssetGroupsWithType:(JZWAssetGroupType)type UsingBlock:(enumerateAssetGroupsBlock)block{
+  
 }
 
 @end
