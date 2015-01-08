@@ -151,11 +151,7 @@
 		DF4703B71A275295001B88BC /* JZWPhotoSelector */ = {
 			isa = PBXGroup;
 			children = (
-				DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */,
-				DF4703BE1A28059E001B88BC /* JZWAsset.h */,
-				DF4703BF1A28059E001B88BC /* JZWAsset.m */,
-				DF4703C11A2805B6001B88BC /* JZWAssetGroup.h */,
-				DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */,
+				DF7CC5951A5E6685008C952E /* model */,
 				DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */,
 				DF4703C91A287258001B88BC /* JZWAssetLibrary.h */,
 				DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */,
@@ -171,6 +167,18 @@
 				DF4703C41A280B14001B88BC /* AssetsLibrary.framework */,
 			);
 			name = Library;
+			sourceTree = "<group>";
+		};
+		DF7CC5951A5E6685008C952E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */,
+				DF4703BE1A28059E001B88BC /* JZWAsset.h */,
+				DF4703BF1A28059E001B88BC /* JZWAsset.m */,
+				DF4703C11A2805B6001B88BC /* JZWAssetGroup.h */,
+				DF4703C21A2805B6001B88BC /* JZWAssetGroup.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

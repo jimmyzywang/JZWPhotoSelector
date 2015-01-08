@@ -14,7 +14,6 @@ typedef NS_ENUM(NSInteger, JZWAssetGroupContentsType){
   JZWAssetGroupVideoContents,
 };
 
-
 typedef NS_ENUM(NSInteger, JZWAssetGroupType){
   JZWALAssetsGroupLibrary,
   JZWALAssetsGroupAlbum,
