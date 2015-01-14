@@ -16,11 +16,11 @@
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor whiteColor];
   _setUpPasswordButton = [[UIButton alloc] init];
-  [_setUpPasswordButton setTitle:@"Set Up a gesture password" forState:UIControlStateNormal];
+  [_setUpPasswordButton setTitle:@"Enter Albums" forState:UIControlStateNormal];
   [_setUpPasswordButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   _setUpPasswordButton.backgroundColor = [UIColor colorWithRed:53.0/255.0 green:139.0/255.0 blue:210.0/255.0 alpha:1];
   _setUpPasswordButton.layer.cornerRadius = 3;
-  [_setUpPasswordButton addTarget:self action:@selector(p_onSetUpPasswordClicked:) forControlEvents:UIControlEventTouchUpInside];
+  [_setUpPasswordButton addTarget:self action:@selector(p_onEnterAlbums:) forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:_setUpPasswordButton];
   
   _verifyPasswordButton = [[UIButton alloc] init];
@@ -29,7 +29,7 @@
   _verifyPasswordButton.backgroundColor = [UIColor colorWithRed:53.0/255.0 green:139.0/255.0 blue:210.0/255.0 alpha:1];
   _verifyPasswordButton.layer.cornerRadius = 3;
   [_verifyPasswordButton addTarget:self action:@selector(p_onVerifyPasswordClicked:) forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:_verifyPasswordButton];
+//  [self.view addSubview:_verifyPasswordButton];
 }
 
 -(void)viewWillLayoutSubviews{
@@ -43,7 +43,7 @@
   _verifyPasswordButton.frame = CGRectMake((self.view.bounds.size.width - _verifyPasswordButton.bounds.size.width)/2, CGRectGetMaxY(_setUpPasswordButton.frame) + 40, _verifyPasswordButton.bounds.size.width, _verifyPasswordButton.bounds.size.height);
 }
 
--(void)p_onSetUpPasswordClicked:(id)sender{
+-(void)p_onEnterAlbums:(id)sender{
 
 }
 

@@ -33,4 +33,27 @@
   }
 }
 
++(ALAssetsGroupType)bridgeToALAssetsGroupContentsType:(JZWAssetGroupType)jzwAssetsGroupType{
+  switch (jzwAssetsGroupType) {
+    case JZWALAssetsGroupLibrary:
+      return ALAssetsGroupLibrary;
+    case JZWALAssetsGroupAlbum:
+      return ALAssetsGroupAlbum;
+    case JZWALAssetsGroupAll:
+      return ALAssetsGroupAll;
+    case JZWALAssetsGroupEvent:
+      return ALAssetsGroupEvent;
+    case JZWALAssetsGroupFaces:
+      return ALAssetsGroupEvent;
+    case JZWALAssetsGroupSavedPhotos:
+      return ALAssetsGroupSavedPhotos;
+#if __IPHONE_5_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
+    case JZWALAssetsGroupPhotoStream:
+      return ALAssetsGroupPhotoStream;
+#endif
+    default:
+      return ALAssetsGroupAll;
+  }
+}
+
 @end

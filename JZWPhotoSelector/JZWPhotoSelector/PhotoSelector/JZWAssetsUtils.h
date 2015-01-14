@@ -13,5 +13,6 @@
 }
 
 +(JZWAssetGroupType)bridgeToJZWAssetGroupContentsType:(ALAssetsGroupType)alAssetGroupType;
++(ALAssetsGroupType)bridgeToALAssetsGroupContentsType:(JZWAssetGroupType)jzwAssetsGroupType;
 
 @end
