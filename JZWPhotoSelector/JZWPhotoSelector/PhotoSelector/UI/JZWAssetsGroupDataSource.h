@@ -10,6 +10,7 @@
 
 @class UIImage;
 @class JZWAssetsGroupDataSource;
+@class JZWAssetGroup;
 
 @protocol JZWAssetsGroupDataSourceDelegate <NSObject>
 -(void)JZWAssetsGroupDataSourceDataReadySuccess:(JZWAssetsGroupDataSource*)dataSource;
@@ -21,5 +22,6 @@
 -(NSInteger)count;
 -(UIImage*)posterImageForIndex:(NSInteger)index;
 -(NSString*)groupNameForIndex:(NSInteger)index;
+-(JZWAssetGroup*)groupForIndex:(NSInteger)index;
 @property(nonatomic,weak)id<JZWAssetsGroupDataSourceDelegate> delegate;
 @end

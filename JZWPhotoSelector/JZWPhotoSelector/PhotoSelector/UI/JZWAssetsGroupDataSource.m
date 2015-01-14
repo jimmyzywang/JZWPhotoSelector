@@ -42,4 +42,8 @@
   return [array_ count];
 }
 
+-(JZWAssetGroup*)groupForIndex:(NSInteger)index{
+  return [array_ objectAtIndex:index];
+}
+
 @end
