@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 com.JZWang.com. All rights reserved.
 //
 #import "ViewController.h"
+#import "JZWAssetsGroupTableController.h"
 
 @implementation ViewController{
   UIButton* _setUpPasswordButton;
@@ -44,7 +45,8 @@
 }
 
 -(void)p_onEnterAlbums:(id)sender{
-
+  JZWAssetsGroupTableController* assetsTableVC = [[JZWAssetsGroupTableController alloc] init];
+  [self.navigationController pushViewController:assetsTableVC animated:YES];
 }
 
 -(void)p_onVerifyPasswordClicked:(id)sender{

@@ -9,7 +9,37 @@
 #import "JZWAssetsGroupDataSource.h"
 #import "JZWPhotoSelector.h"
 
-@implementation JZWAssetsGroupDataSource
+@implementation JZWAssetsGroupDataSource{
+  NSArray* array_;
+}
 
+-(instancetype)init{
+  if (self = [super init]) {
+    array_ = [[NSArray alloc] init];
+    [[JZWAssetLibrary sharedInstance] enumerateAssetGroupsWithType:JZWALAssetsGroupLibrary UsingBlock:^(BOOL success, NSArray *assetGroups) {
+      if (success) {
+        array_ = [assetGroups copy];
+        [_delegate JZWAssetsGroupDataSourceDataReadySuccess:self];
+      }else{
+        [_delegate JZWAssetsGroupDataSourceDataReadyFail:self];
+      }
+    }];
+  }
+  return self;
+}
+
+-(UIImage*)posterImageForIndex:(NSInteger)index{
+  JZWAssetGroup* group = [array_ objectAtIndex:index];
+  return [group posterImage];
+}
+
+-(NSString*)groupNameForIndex:(NSInteger)index{
+  JZWAssetGroup* group = [array_ objectAtIndex:index];
+  return [group displayName];
+}
+
+-(NSInteger)count{
+  return [array_ count];
+}
 
 @end

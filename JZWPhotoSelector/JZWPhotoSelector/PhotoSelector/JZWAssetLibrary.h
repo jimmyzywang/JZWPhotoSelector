@@ -13,7 +13,7 @@ typedef void(^enumerateAssetGroupsBlock)(BOOL success, NSArray* assetGroups);
 
 @interface JZWAssetLibrary : NSObject
 
--(JZWAssetLibrary*)sharedInstance;
++(JZWAssetLibrary*)sharedInstance;
 -(void)enumerateAssetGroupsWithType:(JZWAssetGroupType)type UsingBlock:(enumerateAssetGroupsBlock)block;
 
 @end

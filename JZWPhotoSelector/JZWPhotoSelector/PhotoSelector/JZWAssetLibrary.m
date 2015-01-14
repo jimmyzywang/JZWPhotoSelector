@@ -15,7 +15,7 @@
   ALAssetsLibrary* _assetsLib;
 }
 
--(JZWAssetLibrary*)sharedInstance{
++(JZWAssetLibrary*)sharedInstance{
   static dispatch_once_t pred;
   static JZWAssetLibrary* _library;
   dispatch_once(&pred, ^{

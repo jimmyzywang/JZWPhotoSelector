@@ -29,7 +29,7 @@
   return [_alAssetGroup numberOfAssets];
 }
 
--(NSString*)name{
+-(NSString*)displayName{
   return [_alAssetGroup valueForProperty:ALAssetsGroupPropertyName];
 }
 
@@ -37,10 +37,13 @@
   return [_alAssetGroup valueForProperty:ALAssetsGroupPropertyPersistentID];
 }
 
--(void)enumerateAlassetsUsingBlock:(enumerateBlock)block{
+-(void)enumerateAssetsUsingBlock:(enumerateBlock)block{
   
 }
 
+-(NSString*)description{
+  return [NSString stringWithFormat:@"JZWAssetGroup %p displayName = %@, pID = %@, count = %d",self, [self displayName],[self persistentID],[self alAssetsCount]];
+}
 //-(JZWAssetGroupType)type{
 //  return 
 //}

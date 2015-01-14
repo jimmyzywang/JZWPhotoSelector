@@ -9,22 +9,35 @@
 #import "JZWAssetsGroupTableController.h"
 #import "JZWAssetsGroupDataSource.h"
 
+@interface JZWAssetsGroupTableController () <JZWAssetsGroupDataSourceDelegate>
+
+@end
+
+
 @implementation JZWAssetsGroupTableController{
   JZWAssetsGroupDataSource* dataSource_;
 }
 
 -(instancetype)initWithStyle:(UITableViewStyle)style{
   if (self = [super initWithStyle:style]) {
-    
+
   }
   return self;
 }
 
 -(void)viewDidLoad{
   [super viewDidLoad];
-  self.tableView.separatorColor = [UIColor clearColor];
   self.tableView.tableFooterView = [[UIView alloc] init];
   dataSource_ = [[JZWAssetsGroupDataSource alloc] init];
+  dataSource_.delegate = self;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+  return 110;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  return [dataSource_ count];
 }
 
 
@@ -34,9 +47,27 @@
   if (!cell) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
   }
-  cell.imageView = dataSource_
+  cell.imageView.image = [dataSource_ posterImageForIndex:indexPath.item];
+  cell.textLabel.text = [dataSource_ groupNameForIndex:indexPath.item];
   return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+}
+
+#pragma mark JZWAssetsGroupDataSourceDelegate Begin
+
+-(void)JZWAssetsGroupDataSourceDataReadyFail:(JZWAssetsGroupDataSource *)dataSource{
+  
+}
+
+
+-(void)JZWAssetsGroupDataSourceDataReadySuccess:(JZWAssetsGroupDataSource *)dataSource{
+  [self.tableView reloadData];
+}
+
+
+#pragma mark JZWAssetsGroupDataSourceDelegate End
 
 @end

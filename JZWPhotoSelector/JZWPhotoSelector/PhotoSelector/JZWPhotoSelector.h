@@ -9,3 +9,4 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "JZWAssetGroup.h"
 #import "JZWAsset.h"
+#import "JZWAssetLibrary.h"
