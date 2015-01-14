@@ -20,6 +20,7 @@
 		DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */ = {isa = PBXBuildFile; fileRef = DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */; };
 		DF4703CB1A287258001B88BC /* JZWAssetLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */; };
 		DF85075E1A66202E008D11A4 /* JZWAssetsGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85075D1A66202E008D11A4 /* JZWAssetsGroupTableController.m */; };
+		DF8507671A664941008D11A4 /* JZWAssetsGroupDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8507661A664941008D11A4 /* JZWAssetsGroupDataSource.m */; };
 		DFC39D801A2C048F0011C3EA /* JZWAssetDefine.h in Sources */ = {isa = PBXBuildFile; fileRef = DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */; };
 		DFC39D831A2C0EA70011C3EA /* JZWAssetsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC39D821A2C0EA70011C3EA /* JZWAssetsUtils.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetLibrary.m; path = PhotoSelector/JZWAssetLibrary.m; sourceTree = "<group>"; };
 		DF85075C1A66202E008D11A4 /* JZWAssetsGroupTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsGroupTableController.h; path = PhotoSelector/JZWAssetsGroupTableController.h; sourceTree = "<group>"; };
 		DF85075D1A66202E008D11A4 /* JZWAssetsGroupTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsGroupTableController.m; path = PhotoSelector/JZWAssetsGroupTableController.m; sourceTree = "<group>"; };
+		DF8507651A664941008D11A4 /* JZWAssetsGroupDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsGroupDataSource.h; path = PhotoSelector/UI/JZWAssetsGroupDataSource.h; sourceTree = "<group>"; };
+		DF8507661A664941008D11A4 /* JZWAssetsGroupDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsGroupDataSource.m; path = PhotoSelector/UI/JZWAssetsGroupDataSource.m; sourceTree = "<group>"; };
 		DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetDefine.h; path = PhotoSelector/JZWAssetDefine.h; sourceTree = "<group>"; };
 		DFC39D811A2C0EA70011C3EA /* JZWAssetsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsUtils.h; path = PhotoSelector/JZWAssetsUtils.h; sourceTree = "<group>"; };
 		DFC39D821A2C0EA70011C3EA /* JZWAssetsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsUtils.m; path = PhotoSelector/JZWAssetsUtils.m; sourceTree = "<group>"; };
@@ -154,7 +157,7 @@
 		DF4703B71A275295001B88BC /* JZWPhotoSelector */ = {
 			isa = PBXGroup;
 			children = (
-				DF82ADD11A6612810039B174 /* View */,
+				DF82ADD11A6612810039B174 /* UI */,
 				DF82ADD01A6612610039B174 /* header */,
 				DF7CC5951A5E6685008C952E /* model */,
 			);
@@ -193,13 +196,39 @@
 			name = header;
 			sourceTree = "<group>";
 		};
-		DF82ADD11A6612810039B174 /* View */ = {
+		DF82ADD11A6612810039B174 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DF8507641A6648AB008D11A4 /* DataSource */,
+				DF8507601A66447D008D11A4 /* View */,
+				DF85075F1A664458008D11A4 /* Controller */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		DF85075F1A664458008D11A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DF85075C1A66202E008D11A4 /* JZWAssetsGroupTableController.h */,
 				DF85075D1A66202E008D11A4 /* JZWAssetsGroupTableController.m */,
 			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DF8507601A66447D008D11A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		DF8507641A6648AB008D11A4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DF8507651A664941008D11A4 /* JZWAssetsGroupDataSource.h */,
+				DF8507661A664941008D11A4 /* JZWAssetsGroupDataSource.m */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +337,7 @@
 				DF4703C01A28059E001B88BC /* JZWAsset.m in Sources */,
 				DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */,
 				DF85075E1A66202E008D11A4 /* JZWAssetsGroupTableController.m in Sources */,
+				DF8507671A664941008D11A4 /* JZWAssetsGroupDataSource.m in Sources */,
 				DF4703C31A2805B6001B88BC /* JZWAssetGroup.m in Sources */,
 				DF4703BD1A275377001B88BC /* ViewController.m in Sources */,
 				DF4703BC1A275377001B88BC /* AppDelegate.m in Sources */,
