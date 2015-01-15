@@ -8,6 +8,7 @@
 
 #import "JZWAssetsGroupTableController.h"
 #import "JZWAssetsGroupDataSource.h"
+#import "JZWAssetsTableViewController.h"
 
 @interface JZWAssetsGroupTableController () <JZWAssetsGroupDataSourceDelegate>
 
@@ -53,7 +54,9 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-  
+  JZWAssetGroup* group = [dataSource_ groupForIndex:indexPath.row];
+  JZWAssetsTableViewController* vc = [[JZWAssetsTableViewController alloc] initWithGroup:group];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark JZWAssetsGroupDataSourceDelegate Begin

@@ -22,6 +22,7 @@
       UITapGestureRecognizer* tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_onThumbnailTap:)];
       [imageView addGestureRecognizer:tapGR];
       [array addObject:imageView];
+      [self addSubview:imageView];
     }
     imageViewArray_ = array;
   }
@@ -29,8 +30,7 @@
 }
 
 -(void)setImagesArray:(NSArray *)imageArray{
-  NSAssert([imageViewArray_ count] == [imageArray count], @"count mismatch");
-  for (int index = 0; index < [imageViewArray_ count]; index++) {
+  for (int index = 0; index < [imageArray count]; index++) {
     UIImageView* imageView = [imageViewArray_ objectAtIndex:index];
     imageView.image = [imageArray objectAtIndex:index];
   }
@@ -38,6 +38,14 @@
 
 -(void)p_onThumbnailTap:(UIGestureRecognizer*)gr{
   
+}
+
+-(void)layoutSubviews{
+  [super layoutSubviews];
+  for (NSInteger index = 0;index < [imageViewArray_ count];index++) {
+    UIImageView* imageView = [imageViewArray_ objectAtIndex:index];
+    imageView.frame = CGRectMake(index * (self.bounds.size.width / kThumbnailInCell), 0,(self.bounds.size.width / kThumbnailInCell), self.bounds.size.height);
+  }
 }
 
 

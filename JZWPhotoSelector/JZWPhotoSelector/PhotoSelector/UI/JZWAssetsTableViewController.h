@@ -13,6 +13,6 @@ extern const size_t kThumbnailInCell;
 @class JZWAssetGroup;
 @interface JZWAssetsTableViewController : UITableViewController
 
-@property(nonatomic)JZWAssetGroup* group;
+-(instancetype)initWithGroup:(JZWAssetGroup*)group;
 
 @end

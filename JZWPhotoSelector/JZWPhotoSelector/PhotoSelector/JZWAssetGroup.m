@@ -49,6 +49,7 @@
       [array addObject:jzAsset];
     }else{
       _assetsArray = [array copy];
+      block(YES,_assetsArray);
     }
   }];
 }
