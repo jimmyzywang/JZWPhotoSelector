@@ -23,6 +23,9 @@
 		DF8507671A664941008D11A4 /* JZWAssetsGroupDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8507661A664941008D11A4 /* JZWAssetsGroupDataSource.m */; };
 		DFC39D801A2C048F0011C3EA /* JZWAssetDefine.h in Sources */ = {isa = PBXBuildFile; fileRef = DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */; };
 		DFC39D831A2C0EA70011C3EA /* JZWAssetsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC39D821A2C0EA70011C3EA /* JZWAssetsUtils.m */; };
+		DFFC81211A675FEF0008737A /* JZWAssetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFC81201A675FEF0008737A /* JZWAssetsTableViewController.m */; };
+		DFFC81241A6760410008737A /* JZWAssetsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFC81231A6760410008737A /* JZWAssetsDataSource.m */; };
+		DFFC81271A676BBA0008737A /* JZWAssetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFC81261A676BBA0008737A /* JZWAssetsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,12 @@
 		DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetDefine.h; path = PhotoSelector/JZWAssetDefine.h; sourceTree = "<group>"; };
 		DFC39D811A2C0EA70011C3EA /* JZWAssetsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsUtils.h; path = PhotoSelector/JZWAssetsUtils.h; sourceTree = "<group>"; };
 		DFC39D821A2C0EA70011C3EA /* JZWAssetsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsUtils.m; path = PhotoSelector/JZWAssetsUtils.m; sourceTree = "<group>"; };
+		DFFC811F1A675FEF0008737A /* JZWAssetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsTableViewController.h; path = PhotoSelector/UI/JZWAssetsTableViewController.h; sourceTree = "<group>"; };
+		DFFC81201A675FEF0008737A /* JZWAssetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsTableViewController.m; path = PhotoSelector/UI/JZWAssetsTableViewController.m; sourceTree = "<group>"; };
+		DFFC81221A6760410008737A /* JZWAssetsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsDataSource.h; path = PhotoSelector/UI/JZWAssetsDataSource.h; sourceTree = "<group>"; };
+		DFFC81231A6760410008737A /* JZWAssetsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsDataSource.m; path = PhotoSelector/UI/JZWAssetsDataSource.m; sourceTree = "<group>"; };
+		DFFC81251A676BBA0008737A /* JZWAssetsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsTableViewCell.h; path = PhotoSelector/UI/JZWAssetsTableViewCell.h; sourceTree = "<group>"; };
+		DFFC81261A676BBA0008737A /* JZWAssetsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsTableViewCell.m; path = PhotoSelector/UI/JZWAssetsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +220,8 @@
 			children = (
 				DF85075C1A66202E008D11A4 /* JZWAssetsGroupTableController.h */,
 				DF85075D1A66202E008D11A4 /* JZWAssetsGroupTableController.m */,
+				DFFC811F1A675FEF0008737A /* JZWAssetsTableViewController.h */,
+				DFFC81201A675FEF0008737A /* JZWAssetsTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -218,6 +229,8 @@
 		DF8507601A66447D008D11A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DFFC81251A676BBA0008737A /* JZWAssetsTableViewCell.h */,
+				DFFC81261A676BBA0008737A /* JZWAssetsTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -227,6 +240,8 @@
 			children = (
 				DF8507651A664941008D11A4 /* JZWAssetsGroupDataSource.h */,
 				DF8507661A664941008D11A4 /* JZWAssetsGroupDataSource.m */,
+				DFFC81221A6760410008737A /* JZWAssetsDataSource.h */,
+				DFFC81231A6760410008737A /* JZWAssetsDataSource.m */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -333,6 +348,7 @@
 			files = (
 				DFC39D831A2C0EA70011C3EA /* JZWAssetsUtils.m in Sources */,
 				DF4703CB1A287258001B88BC /* JZWAssetLibrary.m in Sources */,
+				DFFC81271A676BBA0008737A /* JZWAssetsTableViewCell.m in Sources */,
 				DFC39D801A2C048F0011C3EA /* JZWAssetDefine.h in Sources */,
 				DF4703C01A28059E001B88BC /* JZWAsset.m in Sources */,
 				DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */,
@@ -341,7 +357,9 @@
 				DF4703C31A2805B6001B88BC /* JZWAssetGroup.m in Sources */,
 				DF4703BD1A275377001B88BC /* ViewController.m in Sources */,
 				DF4703BC1A275377001B88BC /* AppDelegate.m in Sources */,
+				DFFC81211A675FEF0008737A /* JZWAssetsTableViewController.m in Sources */,
 				DF4703931A27524A001B88BC /* main.m in Sources */,
+				DFFC81241A6760410008737A /* JZWAssetsDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
