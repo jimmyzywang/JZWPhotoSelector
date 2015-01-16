@@ -16,7 +16,7 @@
 -(instancetype)init{
   if (self = [super init]) {
     array_ = [[NSArray alloc] init];
-    [[JZWAssetLibrary sharedInstance] enumerateAssetGroupsWithType:JZWALAssetsGroupLibrary UsingBlock:^(BOOL success, NSArray *assetGroups) {
+    [[JZWAssetLibrary sharedInstance] enumerateAssetGroupsWithType:JZWALAssetsGroupAlbum UsingBlock:^(BOOL success, NSArray *assetGroups) {
       if (success) {
         array_ = [assetGroups copy];
         [_delegate JZWAssetsGroupDataSourceDataReadySuccess:self];

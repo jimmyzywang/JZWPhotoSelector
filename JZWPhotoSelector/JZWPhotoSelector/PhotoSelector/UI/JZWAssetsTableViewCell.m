@@ -18,9 +18,6 @@
     NSMutableArray* array = [[NSMutableArray alloc] init];
     for (int index = 0; index < kThumbnailInCell; index++) {
       UIImageView* imageView = [[UIImageView alloc] init];
-      imageView.tag = index;
-      UITapGestureRecognizer* tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_onThumbnailTap:)];
-      [imageView addGestureRecognizer:tapGR];
       [array addObject:imageView];
       [self addSubview:imageView];
     }
@@ -29,6 +26,8 @@
   return self;
 }
 
+
+
 -(void)setImagesArray:(NSArray *)imageArray{
   for (int index = 0; index < [imageArray count]; index++) {
     UIImageView* imageView = [imageViewArray_ objectAtIndex:index];
@@ -36,12 +35,24 @@
   }
 }
 
+-(void)p_addGestureRecognizerIfNeed{
+  for (NSInteger index = 0;index < [imageViewArray_ count];index++) {
+    UIImageView* imageView = [imageViewArray_ objectAtIndex:index];
+    if (![imageView.gestureRecognizers count]) {
+      UITapGestureRecognizer* tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_onThumbnailTap:)];
+      [imageView addGestureRecognizer:tapGR];
+      imageView.tag = index;
+    }
+  }
+}
+
 -(void)p_onThumbnailTap:(UIGestureRecognizer*)gr{
-  
+  NSAssert(NO, @" ");
 }
 
 -(void)layoutSubviews{
   [super layoutSubviews];
+  [self p_addGestureRecognizerIfNeed];
   for (NSInteger index = 0;index < [imageViewArray_ count];index++) {
     UIImageView* imageView = [imageViewArray_ objectAtIndex:index];
     imageView.frame = CGRectMake(index * (self.bounds.size.width / kThumbnailInCell), 0,(self.bounds.size.width / kThumbnailInCell), self.bounds.size.height);
