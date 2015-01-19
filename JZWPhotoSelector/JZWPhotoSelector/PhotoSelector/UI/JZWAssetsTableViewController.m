@@ -36,10 +36,20 @@ const size_t kThumbnailInCell = 4;
   dataSource_ = [[JZWAssetsDataSource alloc] initWithAssetsGroup:group_];
   dataSource_.delegate = self;
   [dataSource_ loadAssets];
-  self.tableView.tableFooterView = [[UIView alloc] init];
   self.tableView.separatorColor = [UIColor clearColor];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(p_onCompleteButtonClicked:)];
   [self.navigationItem.rightBarButtonItem setEnabled:NO];
+}
+
+-(void)viewWillLayoutSubviews{
+  [super viewWillLayoutSubviews];
+  if (!self.tableView.tableFooterView && self.tableView.bounds.size.width) {
+    UILabel* footerView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 40)];
+    footerView.text = @"长按图片可预览大图";
+    footerView.textColor = [UIColor lightGrayColor];
+    footerView.textAlignment = NSTextAlignmentCenter;
+    self.tableView.tableFooterView = footerView;
+  }
 }
 
 #pragma mark JZWThumbnailViewDelegate Begin
@@ -55,9 +65,8 @@ const size_t kThumbnailInCell = 4;
 #pragma mark JZWThumbnailViewDelegate End
 #pragma mark JZWThumbnailViewDelegate Begin
 
-
 -(void)JZWThumbnailView:(JZWThumbnailView *)view DidLongPressAsset:(JZWAsset *)asset{
-
+  
 }
 
 -(void)JZWThumbnailView:(JZWThumbnailView *)view DidSelectOrDeselectAsset:(JZWAsset *)asset{
@@ -67,7 +76,7 @@ const size_t kThumbnailInCell = 4;
 
 #pragma mark JZWThumbnailViewDelegate End
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-  return [dataSource_ count];
+  return [dataSource_ cellCount];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -75,7 +84,7 @@ const size_t kThumbnailInCell = 4;
   NSInteger cellIndex = indexPath.item;
   NSMutableArray* assets = [NSMutableArray array];
   for (NSInteger assetsIndex = cellIndex * kThumbnailInCell; assetsIndex < kThumbnailInCell*(cellIndex + 1); assetsIndex++) {
-    if (assetsIndex < [dataSource_ count]) {
+    if (assetsIndex < [dataSource_ assetsCount]) {
       JZWAsset* asset = [dataSource_ assetAtIndex:assetsIndex];
       [assets addObject:asset];
     }
@@ -105,6 +114,7 @@ const size_t kThumbnailInCell = 4;
     self.navigationItem.rightBarButtonItem  = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(p_onCompleteButtonClicked:)];
   }else{
     self.navigationItem.rightBarButtonItem  = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(p_onCompleteButtonClicked:)];
+    [self.navigationItem.rightBarButtonItem setEnabled:NO];
   }
 }
 

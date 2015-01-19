@@ -25,7 +25,8 @@
 -(instancetype)initWithAssetsGroup:(JZWAssetGroup*)group;
 -(JZWAsset*)assetAtIndex:(NSInteger)index;
 -(void)loadAssets;
--(NSInteger)count;
+-(NSInteger)assetsCount;
+-(NSInteger)cellCount;
 
 -(NSArray*)selectedAssets;
 -(void)selectOrDeselectAsset:(JZWAsset*)asset;

@@ -9,6 +9,7 @@
 #import "JZWAssetsDataSource.h"
 #import "JZWAssetGroup.h"
 #import "JZWAsset.h"
+#import "JZWAssetsTableViewController.h"
 
 @implementation JZWAssetsDataSource{
   NSArray* assetsArray_;
@@ -24,8 +25,12 @@
   return self;
 }
 
--(NSInteger)count{
+-(NSInteger)assetsCount{
   return [assetsArray_ count];
+}
+
+-(NSInteger)cellCount{
+  return [assetsArray_ count] / kThumbnailInCell;
 }
 
 -(void)loadAssets{

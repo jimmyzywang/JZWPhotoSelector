@@ -46,7 +46,8 @@
 
 -(void)p_onEnterAlbums:(id)sender{
   JZWAssetsGroupTableController* assetsTableVC = [[JZWAssetsGroupTableController alloc] init];
-  [self.navigationController pushViewController:assetsTableVC animated:YES];
+  UINavigationController* naviVC = [[UINavigationController alloc] initWithRootViewController:assetsTableVC];
+  [self presentViewController:naviVC animated:YES completion:nil];
 }
 
 -(void)p_onVerifyPasswordClicked:(id)sender{
