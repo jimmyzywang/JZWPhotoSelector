@@ -85,6 +85,7 @@ const size_t kThumbnailInCell = 4;
   if (!cell) {
     cell = [[JZWAssetsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
   }
+  
   cell.delegate = self;
   [cell setAssetsArray:assets];
   cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -100,11 +101,10 @@ const size_t kThumbnailInCell = 4;
 
 -(void)p_updateNavigationTitle{
   if ([[dataSource_ selectedAssets] count]) {
-    [self.navigationItem.rightBarButtonItem setEnabled:YES];
-    self.navigationItem.rightBarButtonItem.title = [NSString stringWithFormat:@"完成(%d)",[[dataSource_ selectedAssets] count]];
+    NSString* title = [NSString stringWithFormat:@"完成(%ld)",[[dataSource_ selectedAssets] count]];
+    self.navigationItem.rightBarButtonItem  = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(p_onCompleteButtonClicked:)];
   }else{
-    [self.navigationItem.rightBarButtonItem setEnabled:NO];
-    self.navigationItem.rightBarButtonItem.title = @"完成";
+    self.navigationItem.rightBarButtonItem  = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(p_onCompleteButtonClicked:)];
   }
 }
 
