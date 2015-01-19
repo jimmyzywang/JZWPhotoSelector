@@ -32,4 +32,9 @@
   return image;
 }
 
+-(NSUInteger)hash{
+  return [_alAsset hash];
+}
+
+
 @end

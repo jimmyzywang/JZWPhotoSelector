@@ -11,6 +11,7 @@
 @class UIImage;
 @class JZWAssetGroup;
 @class JZWAssetsDataSource;
+@class JZWAsset;
 
 @protocol JZWAssetsDataSourceDelegate <NSObject>
 
@@ -22,8 +23,12 @@
 @interface JZWAssetsDataSource : NSObject
 
 -(instancetype)initWithAssetsGroup:(JZWAssetGroup*)group;
--(UIImage*)thumbnailAtIndex:(NSInteger)index;
+-(JZWAsset*)assetAtIndex:(NSInteger)index;
 -(void)loadAssets;
 -(NSInteger)count;
+
+-(NSArray*)selectedAssets;
+-(void)selectOrDeselectAsset:(JZWAsset*)asset;
+
 @property(nonatomic,weak)id<JZWAssetsDataSourceDelegate> delegate;
 @end

@@ -12,12 +12,14 @@
 
 @implementation JZWAssetsDataSource{
   NSArray* assetsArray_;
+  NSMutableArray* selectAssetsArray_;
   JZWAssetGroup* group_;
 }
 
 -(instancetype)initWithAssetsGroup:(JZWAssetGroup*)group{
   if (self = [super init]) {
     group_ = group;
+    selectAssetsArray_ = [NSMutableArray array];
   }
   return self;
 }
@@ -35,9 +37,20 @@
   }];
 }
 
--(UIImage*)thumbnailAtIndex:(NSInteger)index{
-  JZWAsset* asset = [assetsArray_ objectAtIndex:index];
-  return [asset thumnNail];
+-(JZWAsset*)assetAtIndex:(NSInteger)index{
+  return [assetsArray_ objectAtIndex:index];
+}
+
+-(NSArray*)selectedAssets{
+  return selectAssetsArray_;
+}
+
+-(void)selectOrDeselectAsset:(JZWAsset*)asset{
+  if (![selectAssetsArray_ containsObject:asset]) {
+    [selectAssetsArray_ addObject:asset];
+  }else{
+    [selectAssetsArray_ removeObject:asset];
+  }
 }
 
 

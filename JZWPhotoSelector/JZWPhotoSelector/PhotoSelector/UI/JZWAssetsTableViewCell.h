@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JZWThumbnailViewDelegate;
+
 @interface JZWAssetsTableViewCell : UITableViewCell
 
--(void)setImagesArray:(NSArray*)imageArray; //array是UIImage
+-(void)setAssetsArray:(NSArray*)Assets; //array是JZWAssets的array
+
+@property (nonatomic,weak)id<JZWThumbnailViewDelegate> delegate;
 
 @end

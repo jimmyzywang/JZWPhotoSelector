@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/NSObjCRuntime.h>
 
 extern const size_t kThumbnailInCell;
 
 @class JZWAssetGroup;
 @interface JZWAssetsTableViewController : UITableViewController
 
--(instancetype)initWithGroup:(JZWAssetGroup*)group;
+-(instancetype)initWithGroup:(JZWAssetGroup*)group NS_DESIGNATED_INITIALIZER;
 
 @end
