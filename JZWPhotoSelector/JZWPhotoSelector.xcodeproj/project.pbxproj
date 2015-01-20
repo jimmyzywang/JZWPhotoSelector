@@ -20,6 +20,7 @@
 		DF4703C81A280B87001B88BC /* JZWPhotoSelector.h in Sources */ = {isa = PBXBuildFile; fileRef = DF4703C71A280B87001B88BC /* JZWPhotoSelector.h */; };
 		DF4703CB1A287258001B88BC /* JZWAssetLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */; };
 		DF768F091A6CA84300FC0F51 /* JZWThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF768F081A6CA84300FC0F51 /* JZWThumbnailView.m */; };
+		DF768F0C1A6D1F2B00FC0F51 /* JZWAssetPreviewContainController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF768F0B1A6D1F2B00FC0F51 /* JZWAssetPreviewContainController.m */; };
 		DF85075E1A66202E008D11A4 /* JZWAssetsGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85075D1A66202E008D11A4 /* JZWAssetsGroupTableController.m */; };
 		DF8507671A664941008D11A4 /* JZWAssetsGroupDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8507661A664941008D11A4 /* JZWAssetsGroupDataSource.m */; };
 		DFC39D801A2C048F0011C3EA /* JZWAssetDefine.h in Sources */ = {isa = PBXBuildFile; fileRef = DFC39D7F1A2C048F0011C3EA /* JZWAssetDefine.h */; };
@@ -63,6 +64,8 @@
 		DF4703CA1A287258001B88BC /* JZWAssetLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetLibrary.m; path = PhotoSelector/JZWAssetLibrary.m; sourceTree = "<group>"; };
 		DF768F071A6CA84300FC0F51 /* JZWThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWThumbnailView.h; path = PhotoSelector/UI/JZWThumbnailView.h; sourceTree = "<group>"; };
 		DF768F081A6CA84300FC0F51 /* JZWThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWThumbnailView.m; path = PhotoSelector/UI/JZWThumbnailView.m; sourceTree = "<group>"; };
+		DF768F0A1A6D1F2B00FC0F51 /* JZWAssetPreviewContainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetPreviewContainController.h; path = PhotoSelector/UI/JZWAssetPreviewContainController.h; sourceTree = "<group>"; };
+		DF768F0B1A6D1F2B00FC0F51 /* JZWAssetPreviewContainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetPreviewContainController.m; path = PhotoSelector/UI/JZWAssetPreviewContainController.m; sourceTree = "<group>"; };
 		DF85075C1A66202E008D11A4 /* JZWAssetsGroupTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsGroupTableController.h; path = PhotoSelector/JZWAssetsGroupTableController.h; sourceTree = "<group>"; };
 		DF85075D1A66202E008D11A4 /* JZWAssetsGroupTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZWAssetsGroupTableController.m; path = PhotoSelector/JZWAssetsGroupTableController.m; sourceTree = "<group>"; };
 		DF8507651A664941008D11A4 /* JZWAssetsGroupDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZWAssetsGroupDataSource.h; path = PhotoSelector/UI/JZWAssetsGroupDataSource.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				DF85075D1A66202E008D11A4 /* JZWAssetsGroupTableController.m */,
 				DFFC811F1A675FEF0008737A /* JZWAssetsTableViewController.h */,
 				DFFC81201A675FEF0008737A /* JZWAssetsTableViewController.m */,
+				DF768F0A1A6D1F2B00FC0F51 /* JZWAssetPreviewContainController.h */,
+				DF768F0B1A6D1F2B00FC0F51 /* JZWAssetPreviewContainController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 			files = (
 				DFC39D831A2C0EA70011C3EA /* JZWAssetsUtils.m in Sources */,
 				DF4703CB1A287258001B88BC /* JZWAssetLibrary.m in Sources */,
+				DF768F0C1A6D1F2B00FC0F51 /* JZWAssetPreviewContainController.m in Sources */,
 				DFFC81271A676BBA0008737A /* JZWAssetsTableViewCell.m in Sources */,
 				DFC39D801A2C048F0011C3EA /* JZWAssetDefine.h in Sources */,
 				DF4703C01A28059E001B88BC /* JZWAsset.m in Sources */,

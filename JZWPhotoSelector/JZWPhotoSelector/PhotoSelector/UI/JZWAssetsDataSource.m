@@ -33,6 +33,24 @@
   return [assetsArray_ count] / kThumbnailInCell;
 }
 
+-(JZWAsset*)previousOneInAsset:(JZWAsset*)asset{
+  NSUInteger index = [assetsArray_ indexOfObject:asset];
+  if (index == 0) {
+    return NULL;
+  }else{
+    return [assetsArray_ objectAtIndex:--index];
+  }
+}
+
+-(JZWAsset*)afterOneInAsset:(JZWAsset*)asset{
+  NSUInteger index = [assetsArray_ indexOfObject:asset];
+  if (index == [assetsArray_ count]) {
+    return NULL;
+  }else{
+    return [assetsArray_ objectAtIndex:++index];
+  }
+}
+
 -(void)loadAssets{
   [group_ enumerateAssetsUsingBlock:^(BOOL finish, NSArray *assets) {
     if (finish) {

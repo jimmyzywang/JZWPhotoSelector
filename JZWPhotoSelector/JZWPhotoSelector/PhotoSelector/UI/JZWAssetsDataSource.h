@@ -27,6 +27,8 @@
 -(void)loadAssets;
 -(NSInteger)assetsCount;
 -(NSInteger)cellCount;
+-(JZWAsset*)previousOneInAsset:(JZWAsset*)asset;
+-(JZWAsset*)afterOneInAsset:(JZWAsset*)asset;
 
 -(NSArray*)selectedAssets;
 -(void)selectOrDeselectAsset:(JZWAsset*)asset;

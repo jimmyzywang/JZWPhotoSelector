@@ -11,10 +11,11 @@
 #import "JZWAssetsTableViewCell.h"
 #import "JZWAsset.h"
 #import "JZWThumbnailView.h"
+#import "JZWAssetPreviewContainController.h"
 
 const size_t kThumbnailInCell = 4;
 
-@interface JZWAssetsTableViewController () <JZWAssetsDataSourceDelegate,JZWThumbnailViewDelegate>
+@interface JZWAssetsTableViewController () <JZWAssetsDataSourceDelegate,JZWThumbnailViewDelegate,UIPageViewControllerDataSource,UIPageViewControllerDelegate>
 
 @end
 
@@ -66,7 +67,10 @@ const size_t kThumbnailInCell = 4;
 #pragma mark JZWThumbnailViewDelegate Begin
 
 -(void)JZWThumbnailView:(JZWThumbnailView *)view DidLongPressAsset:(JZWAsset *)asset{
-  
+  UIPageViewController* pageVC = [[UIPageViewController alloc] init];
+  pageVC.dataSource = self;
+  pageVC.delegate = self;
+  self
 }
 
 -(void)JZWThumbnailView:(JZWThumbnailView *)view DidSelectOrDeselectAsset:(JZWAsset *)asset{
@@ -123,7 +127,37 @@ const size_t kThumbnailInCell = 4;
 }
 
 #pragma mark Private Methods End
+#pragma mark UIPageViewControllerDataSource Begin
+-(UIViewController*)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController{
+  JZWAssetPreviewContainController* VC = (JZWAssetPreviewContainController*)viewController;
+  JZWAsset* asset = VC.asset;
+  JZWAsset* nextAsset = [dataSource_ afterOneInAsset:asset];
+  if (nextAsset) {
+    JZWAssetPreviewContainController* containVC = [[JZWAssetPreviewContainController alloc] init];
+    containVC.asset = nextAsset;
+    return containVC;
+  }else{
+    return nil;
+  }
+}
 
+-(UIViewController*)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController{
+  JZWAssetPreviewContainController* VC = (JZWAssetPreviewContainController*)viewController;
+  JZWAsset* asset = VC.asset;
+  JZWAsset* previousAsset = [dataSource_ previousOneInAsset:asset];
+  if (previousAsset) {
+    JZWAssetPreviewContainController* containVC = [[JZWAssetPreviewContainController alloc] init];
+    containVC.asset = previousAsset;
+    return containVC;
+  }else{
+    return nil;
+  }
+}
+
+-(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed{
+  
+}
+#pragma mark UIPageViewControllerDataSource End
 
 
 @end
